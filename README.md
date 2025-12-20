@@ -64,6 +64,25 @@ skill-name/
 
 ---
 
+## Understanding Agent Skills
+
+Agent Skills are reusable components that extend the capabilities of AI agents in VS Code and other development environments. They enable agents to perform specific tasks by providing structured knowledge about tools, frameworks, and best practices.
+
+**How to Use These Skills:**
+
+These skills are designed to be referenced by AI agents as they work on projects. When an agent encounters a task related to Next.js, Prisma, AI SDK, or vector databases, it can consult the relevant skill to understand best practices, configuration options, and implementation patterns. Each skill acts as a knowledge base that helps agents make informed decisions and generate production-ready code.
+
+You can leverage these skills in several ways:
+
+1. **In VS Code Copilot** - Reference these skills when working on agent-related tasks to get contextual guidance
+2. **In Custom Agents** - Build your own agents that can reference these skills for specialized knowledge
+3. **Documentation Reference** - Use as comprehensive guides when developing applications with these technologies
+4. **Team Knowledge Base** - Share within your team to ensure consistent implementation patterns and best practices
+
+The skills are structured to be both human-readable and machine-parseable, making them ideal for both developer reference and AI agent consumption.
+
+---
+
 ## Getting Started
 
 ### Prerequisites
@@ -138,6 +157,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Resources
 
+- **[VS Code Agent Skills Documentation](https://code.visualstudio.com/docs/copilot/customization/agent-skills)** - Official guide on creating and using agent skills
 - **[AI SDK Documentation](https://v6.ai-sdk.dev/docs)** - Official AI SDK docs
 - **[Next.js Documentation](https://nextjs.org/docs)** - Next.js official docs
 - **[Prisma Documentation](https://www.prisma.io/docs)** - Prisma ORM docs
