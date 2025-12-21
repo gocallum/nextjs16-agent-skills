@@ -70,7 +70,6 @@ keywords: ["shadcn", "ui", "Next.js", "pnpm", "blocks", "sonner", "forms", "dark
       "./app/**/*.{ts,tsx}",
       "./components/**/*.{ts,tsx}",
       "./src/**/*.{ts,tsx}",
-      "./node_modules/@shadcn/ui/dist/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
       extend: {
