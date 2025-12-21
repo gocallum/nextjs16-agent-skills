@@ -30,6 +30,8 @@ These tools form the foundation of modern full-stack applications and represent 
 
 - **[AI SDK 6 Skills](./skills/ai-sdk-6-skills)** - Comprehensive coverage of AI SDK 6 beta including agents, tool approval, structured output, reranking, Groq provider integration, and Vercel AI Gateway
 
+- **[MCP Server Skills](./skills/mcp-server-skills)** - Next.js MCP server pattern using mcp-handler with shared Zod schemas, reusable server actions, and lightweight `app/api/[transport]/route.ts` handlers
+
 ### 🚀 Framework & Infrastructure
 
 - **[Next.js 16 Skills](./skills/nextjs16-skills)** - Essential facts about Next.js 16 breaking changes, Turbopack bundler, async request APIs, and upgrade path
