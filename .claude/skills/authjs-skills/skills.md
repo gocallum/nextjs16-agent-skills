@@ -8,7 +8,7 @@ description: Auth.js v5 setup for Next.js authentication including Google OAuth,
 This guide has been updated for **Next.js 16** compatibility. Key changes:
 
 - ✅ **Use `proxy.ts`** instead of `middleware.ts` (deprecated in Next.js 16)
-- ✅ **Node.js runtime only** for proxy files (Edge runtime not supported in proxy.ts)
+- ✅ **Node.js runtime only** for proxy.ts files (Edge runtime is not supported for proxy.ts)
 - ✅ **Async request APIs** - Next.js 16 requires `await` for `cookies()`, `headers()`, etc.
 - ⚠️ **Keep `middleware.ts`** only if Edge runtime is required (though deprecated)
 
@@ -1252,16 +1252,14 @@ Ensure redirect URI in Google Console matches: `http://localhost:3000/api/auth/c
 ```
 Error: middleware.ts is deprecated
 ```
-Rename `middleware.ts` to `proxy.ts` and update the export:
+Rename the file from `middleware.ts` to `proxy.ts`. The export code remains the same:
 ```typescript
-// Change from:
+// This code stays the same in both files:
 export { auth as middleware } from "@/auth"
 
-// To (in proxy.ts file):
-export { auth as middleware } from "@/auth"
+// The only change is the filename:
+// middleware.ts → proxy.ts
 ```
-
-**Note**: The export name remains `middleware` - only the filename changes from `middleware.ts` to `proxy.ts`.
 
 **Edge runtime errors with proxy.ts**:
 ```
