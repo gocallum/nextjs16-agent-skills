@@ -233,6 +233,7 @@ import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 import { z } from "zod"
 import bcrypt from "bcryptjs"
+import { prisma } from "@/lib/prisma"
 
 const credentialsSchema = z.object({
   email: z.string().email(),
@@ -374,6 +375,7 @@ export default async function ProfilePage() {
 
 import { auth } from "@/auth"
 import { revalidatePath } from "next/cache"
+import { prisma } from "@/lib/prisma"
 
 export async function updateProfile(formData: FormData) {
   const session = await auth()
@@ -563,6 +565,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
 ```typescript
 import NextAuth from "next-auth"
+import type { DefaultSession } from "next-auth"
 
 declare module "next-auth" {
   interface Session {
@@ -747,6 +750,7 @@ export async function GET() {
 // lib/auth-helpers.ts
 import { auth } from "@/auth"
 import { NextResponse } from "next/server"
+import type { Session } from "next-auth"
 
 export async function withAuth(
   handler: (session: Session) => Promise<NextResponse>
@@ -871,6 +875,7 @@ import NextAuth from "next-auth"
 import Google from "next-auth/providers/google"
 import GitHub from "next-auth/providers/github"
 import Credentials from "next-auth/providers/credentials"
+import { prisma } from "@/lib/prisma"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -1052,6 +1057,7 @@ export async function deleteUser(userId: string) {
     throw new Error("Unauthorized")
   }
 
+  const { prisma } = await import("@/lib/prisma")
   await prisma.user.delete({ where: { id: userId } })
 }
 ```
