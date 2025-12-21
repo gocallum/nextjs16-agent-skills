@@ -1,6 +1,6 @@
 ---
 name: authjs-skills
-description: Auth.js v5 setup for Next.js authentication including Google OAuth, credentials provider, environment configuration, and core API integration. Updated for Next.js 16 compatibility with proxy.ts support.
+description: Auth.js v5 setup for Next.js authentication including Google OAuth, credentials provider, environment configuration, and core API integration. Updated for Next.js 16 compatibility (use proxy.ts filename with middleware export).
 ---
 
 ## Important: Next.js 16 Compatibility
@@ -11,6 +11,8 @@ This guide has been updated for **Next.js 16** compatibility. Key changes:
 - ✅ **Node.js runtime only** for proxy files (Edge runtime not supported in proxy.ts)
 - ✅ **Async request APIs** - Next.js 16 requires `await` for `cookies()`, `headers()`, etc.
 - ⚠️ **Keep `middleware.ts`** only if Edge runtime is required (though deprecated)
+
+**Note**: The export remains as `middleware` even when using the `proxy.ts` filename. Only the filename changes in Next.js 16.
 
 See the [Next.js 16 Skills](../nextjs16-skills/SKILL.MD) for complete Next.js 16 migration guide.
 
@@ -155,14 +157,14 @@ export const { GET, POST } = handlers
 
 ### 3. Add Proxy/Middleware (Optional but Recommended)
 
-**Next.js 16 Update**: In Next.js 16, `middleware.ts` is deprecated in favor of `proxy.ts`. Use `proxy.ts` for Node.js runtime (recommended), or keep `middleware.ts` if you require Edge runtime.
+**Next.js 16 Update**: In Next.js 16, `middleware.ts` is deprecated in favor of `proxy.ts`. Use `proxy.ts` for Node.js runtime (recommended), or keep `middleware.ts` if you require Edge runtime. The export remains as `middleware` in both cases - only the filename changes.
 
 #### Using proxy.ts (Recommended for Next.js 16)
 
 Create `proxy.ts` at the project root:
 
 ```typescript
-export { auth as proxy } from "@/auth"
+export { auth as middleware } from "@/auth"
 
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
@@ -188,7 +190,7 @@ export const config = {
 }
 ```
 
-**Note**: `proxy.ts` runs on Node.js runtime only. Edge runtime is not supported.
+**Note**: `proxy.ts` runs on Node.js runtime only. Edge runtime is not supported. Save this file as `proxy.ts` (not `middleware.ts`) to follow Next.js 16 conventions.
 
 #### Using middleware.ts (For Edge Runtime)
 
@@ -1167,10 +1169,10 @@ export async function deleteUser(userId: string) {
 
 When migrating to Auth.js v5 with Next.js 16:
 
-1. **Use `proxy.ts` instead of `middleware.ts`**: Next.js 16 deprecates `middleware.ts`. Rename your file to `proxy.ts` and export as `proxy` instead of `middleware`:
+1. **Use `proxy.ts` instead of `middleware.ts`**: Next.js 16 deprecates the `middleware.ts` filename. Rename your file to `proxy.ts` but keep the export as `middleware`:
    ```typescript
-   // proxy.ts (Next.js 16)
-   export { auth as proxy } from "@/auth"
+   // proxy.ts (Next.js 16) - note the filename is proxy.ts but export is still middleware
+   export { auth as middleware } from "@/auth"
    ```
    
 2. **Handle Async Request APIs**: If you're using `cookies()`, `headers()`, or `draftMode()` directly in your code, ensure you `await` them in Next.js 16.
@@ -1207,7 +1209,8 @@ export default withAuth({
 })
 
 // v5 with Next.js 16 (new - using proxy.ts)
-export { auth as proxy } from "@/auth"
+// Note: filename is proxy.ts but export is still middleware
+export { auth as middleware } from "@/auth"
 
 // v5 with Next.js 16 (alternative - using middleware.ts for Edge runtime)
 export { auth as middleware } from "@/auth"
@@ -1254,9 +1257,11 @@ Rename `middleware.ts` to `proxy.ts` and update the export:
 // Change from:
 export { auth as middleware } from "@/auth"
 
-// To:
-export { auth as proxy } from "@/auth"
+// To (in proxy.ts file):
+export { auth as middleware } from "@/auth"
 ```
+
+**Note**: The export name remains `middleware` - only the filename changes from `middleware.ts` to `proxy.ts`.
 
 **Edge runtime errors with proxy.ts**:
 ```
