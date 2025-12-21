@@ -38,6 +38,8 @@ These tools form the foundation of modern full-stack applications and represent 
 
 - **[Prisma ORM v7 Skills](./skills/prisma-orm-v7-skills)** - Prisma v7 breaking changes including ESM-only, driver adapters, new prisma.config.ts, and pnpm as default package manager
 
+- **[Shadcn UI Skills](./.claude/skills/shadcn-skills/skills.md)** - Next.js-first shadcn/ui components, blocks, Sonner toasts, forms, theming, and MCP-powered agent workflows
+
 ### 🔐 Authentication & Security
 
 - **[Auth.js Skills](./skills/authjs-skills)** - Complete Auth.js v5 guide for Next.js authentication including Google OAuth, credentials provider, session management, middleware, and security best practices
