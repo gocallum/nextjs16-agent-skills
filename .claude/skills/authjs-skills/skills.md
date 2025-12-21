@@ -155,7 +155,7 @@ import { handlers } from "@/auth"
 export const { GET, POST } = handlers
 ```
 
-### 3. Add Proxy/Middleware (Optional but Recommended)
+### 3. Add Proxy (Optional but Recommended)
 
 **Next.js 16 Update**: In Next.js 16, `middleware.ts` is deprecated in favor of `proxy.ts`. Use `proxy.ts` for Node.js runtime (recommended), or keep `middleware.ts` if you require Edge runtime. The export remains as `middleware` in both cases - only the filename changes.
 
