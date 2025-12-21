@@ -88,14 +88,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         password: { label: "Password", type: "password" },
       },
       authorize: async (credentials) => {
-        // Implement your authentication logic here
-        // Return user object if valid, null otherwise
+        // TODO: Implement your authentication logic here
+        // This is a basic example - see Credentials Provider section below for complete implementation
         if (!credentials?.email || !credentials?.password) {
           return null
         }
 
-        // Example: validate against database
-        const user = await getUserFromDb(credentials.email, credentials.password)
+        // Example: validate against database (placeholder)
+        // See "Credentials Provider" section for full implementation with bcrypt
+        const user = { id: "1", email: credentials.email, name: "User" } // Replace with actual DB lookup
         
         if (!user) {
           return null
@@ -119,14 +120,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
   },
 })
-
-// Helper function (example)
-async function getUserFromDb(email: string, password: string) {
-  // Implement database lookup and password verification
-  // IMPORTANT: Use bcrypt or similar for password hashing
-  return null // Replace with actual implementation
-}
 ```
+
+**Note**: This is a basic setup example. For production-ready credentials authentication, see the "Credentials Provider" section below which includes proper password hashing with bcrypt and database integration.
 
 ### 2. Create API Route Handler
 
@@ -225,6 +221,14 @@ Google({
 ```
 
 ## Credentials Provider (Username/Password)
+
+### Required Dependencies
+
+```sh
+# Install required packages for credentials provider
+pnpm add bcryptjs zod
+pnpm add -D @types/bcryptjs
+```
 
 ### 1. Basic Configuration
 
@@ -657,11 +661,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
 ## Database Adapter (Optional)
 
-For persisting users, accounts, and sessions in a database:
+For persisting users, accounts, and sessions in a database, install the Prisma adapter:
 
 ```sh
 pnpm add @auth/prisma-adapter
 ```
+
+Then configure it in your `auth.ts`:
 
 ```typescript
 import NextAuth from "next-auth"
