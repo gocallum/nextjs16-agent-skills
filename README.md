@@ -26,27 +26,27 @@ These tools form the foundation of modern full-stack applications and represent 
 
 ### 🤖 AI & Agents
 
-- **[AI Agents & UI Skills](./skills/ai-agents-ui-skills)** - Complete guide to building agentic applications with ToolLoopAgent, workflow patterns, and AI SDK UI components (useChat, generative UIs, tool calling)
+- **[AI Agents & UI Skills](./.claude/skills/ai-agents-ui-skills/skills.md)** - Complete guide to building agentic applications with ToolLoopAgent, workflow patterns, and AI SDK UI components (useChat, generative UIs, tool calling)
 
-- **[AI SDK 6 Skills](./skills/ai-sdk-6-skills)** - Comprehensive coverage of AI SDK 6 beta including agents, tool approval, structured output, reranking, Groq provider integration, and Vercel AI Gateway
+- **[AI SDK 6 Skills](./.claude/skills/ai-sdk-6-skills/skills.md)** - Comprehensive coverage of AI SDK 6 beta including agents, tool approval, structured output, reranking, Groq provider integration, and Vercel AI Gateway
 
-- **[MCP Server Skills](./skills/mcp-server-skills)** - Next.js MCP server pattern using mcp-handler with shared Zod schemas, reusable server actions, and lightweight `app/api/[transport]/route.ts` handlers
+- **[MCP Server Skills](./.claude/skills/mcp-server-skills/skills.md)** - Next.js MCP server pattern using mcp-handler with shared Zod schemas, reusable server actions, and lightweight `app/api/[transport]/route.ts` handlers
 
 ### 🚀 Framework & Infrastructure
 
-- **[Next.js 16 Skills](./skills/nextjs16-skills)** - Essential facts about Next.js 16 breaking changes, Turbopack bundler, async request APIs, and upgrade path
+- **[Next.js 16 Skills](./.claude/skills/nextjs16-skills/SKILL.MD)** - Essential facts about Next.js 16 breaking changes, Turbopack bundler, async request APIs, and upgrade path
 
-- **[Prisma ORM v7 Skills](./skills/prisma-orm-v7-skills)** - Prisma v7 breaking changes including ESM-only, driver adapters, new prisma.config.ts, and pnpm as default package manager
+- **[Prisma ORM v7 Skills](./.claude/skills/prisma-orm-v7-skills/skills.md)** - Prisma v7 breaking changes including ESM-only, driver adapters, new prisma.config.ts, and pnpm as default package manager
 
 - **[Shadcn UI Skills](./.claude/skills/shadcn-skills/skills.md)** - Next.js-first shadcn/ui components, blocks, Sonner toasts, forms, theming, and MCP-powered agent workflows
 
 ### 🔐 Authentication & Security
 
-- **[Auth.js Skills](./skills/authjs-skills)** - Complete Auth.js v5 guide for Next.js authentication including Google OAuth, credentials provider, session management, middleware, and security best practices
+- **[Auth.js Skills](./.claude/skills/authjs-skills/skills.md)** - Complete Auth.js v5 guide for Next.js authentication including Google OAuth, credentials provider, session management, middleware, and security best practices
 
 ### 💾 Data & Storage
 
-- **[Upstash Vector DB Skills](./skills/upstash-vector-db-skills)** - Serverless vector database guide covering semantic search, namespace isolation, MixBread embedding models, and Vercel deployment patterns
+- **[Upstash Vector DB Skills](./.claude/skills/upstash-vector-db-skills/skills.md)** - Serverless vector database guide covering semantic search, namespace isolation, MixBread embedding models, and Vercel deployment patterns
 
 ---
 

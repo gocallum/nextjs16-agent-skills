@@ -179,8 +179,9 @@ keywords: ["shadcn", "ui", "Next.js", "pnpm", "blocks", "sonner", "forms", "dark
   pnpm dlx shadcn@latest add sonner
   ```
 - Mount once in your root layout or top-level provider:
-  ```tsx
-  import { Toaster, toast } from "@/components/ui/sonner"
+```tsx
+import { Toaster } from "@/components/ui/sonner"
+import { toast } from "sonner"
 
   export function RootProviders({ children }: { children: React.ReactNode }) {
     return (
