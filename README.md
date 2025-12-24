@@ -48,6 +48,10 @@ These tools form the foundation of modern full-stack applications and represent 
 
 - **[Upstash Vector DB Skills](./.claude/skills/upstash-vector-db-skills/skills.md)** - Serverless vector database guide covering semantic search, namespace isolation, MixBread embedding models, and Vercel deployment patterns
 
+### 📋 Product & Business Analysis
+
+- **[BA/PRD Skills](./.claude/skills/ba-prd-skills/skills.md)** - PRD Mastery skill for context-aware, expert-driven, and token-efficient Product Requirements Documents. Includes repository reconnaissance, expert questioning frameworks from Cagan, Torres, and Biddle, and organized PRD management
+
 ---
 
 ## Skill Structure
@@ -196,7 +200,7 @@ If you find these skills helpful, please consider:
 
 ## Changelog
 
-### v1.0.0 (December 2025)
+### v1.0.0 (December 2024)
 
 **Initial Release**
 - AI Agents & UI Skills
@@ -204,6 +208,7 @@ If you find these skills helpful, please consider:
 - Next.js 16 Skills
 - Prisma ORM v7 Skills
 - Upstash Vector DB Skills
+- BA/PRD Skills - Product Requirements Document mastery
 
 ---
 
