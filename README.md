@@ -28,6 +28,11 @@ AI SDK 6 Beta overview including agents, tool approval, Groq (Llama), and Vercel
 #### mcp-server-skills
 Pattern for building MCP servers in Next.js with mcp-handler, shared Zod schemas, and reusable server actions.
 
+### 📧 Integrations & Services
+
+#### resend-integration-skills
+Integrate Resend email service via MCP protocol for AI agents to send emails with GitHub Copilot Coding Agent, VS Code, Claude Desktop, and Cursor. Set up transactional and marketing emails, configure sender verification, and use AI to automate email workflows. **Recommended for GitHub Copilot Coding Agent teams.**
+
 ### 🚀 Framework & Infrastructure
 
 #### nextjs16-skills
@@ -160,6 +165,8 @@ description: {One sentence describing when to use this skill}
 | AI SDK | 6 (Beta) |
 | Auth.js | v5 |
 | Upstash Vector | Latest |
+| Resend Email API | Latest |
+| MCP Protocol | Latest |
 | TypeScript | 5+ |
 
 ## Contributing
@@ -181,6 +188,8 @@ See [AGENTS.md](AGENTS.md) for detailed contribution guidelines, [CLAUDE.md](CLA
 - [Prisma Documentation](https://www.prisma.io/docs)
 - [Auth.js Documentation](https://authjs.dev/)
 - [Upstash Vector DB](https://upstash.com/docs/vector/overall/getstarted)
+- [Resend Email API](https://resend.com/docs)
+- [MCP Protocol](https://modelcontextprotocol.io)
 
 ## Author
 
