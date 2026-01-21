@@ -46,6 +46,9 @@ Installation, components, blocks, forms, theming, and MCP guidance for shadcn/ui
 
 ### 🔐 Authentication & Security
 
+#### clerk-nextjs-skills
+Clerk authentication for Next.js 16 (App Router only) with proxy.ts setup, migration from middleware.ts (Next.js 15), environment configuration, and MCP server integration. Includes OAuth token verification and dynamic client registration.
+
 #### authjs-skills
 Auth.js v5 setup for Next.js authentication including Google OAuth, credentials provider, environment configuration, and core API integration.
 

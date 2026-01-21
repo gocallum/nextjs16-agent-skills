@@ -16,6 +16,7 @@ Skills follow the [Agent Skills](https://agentskills.io/) format.
 | `ai-sdk-6-skills` | AI SDK 6 Beta overview, agents, tool approval, Groq (Llama), and Vercel AI Gateway. Key breaking changes from v5 and new patterns. |
 | `authjs-skills` | Auth.js v5 setup for Next.js authentication including Google OAuth, credentials provider, environment configuration, and core API integration |
 | `ba-prd-skills` | PRD Mastery skill for context-aware, expert-driven, and token-efficient Product Requirements Documents |
+| `clerk-nextjs-skills` | Clerk authentication for Next.js 16 (App Router) with proxy.ts middleware, Next.js 15→16 migration, environment setup, and MCP server OAuth security |
 | `mcp-server-skills` | Pattern for building MCP servers in Next.js with mcp-handler, shared Zod schemas, and reusable server actions |
 | `nextjs16-skills` | Key facts and links for Next.js 16. Use for planning, writing, and troubleshooting Next.js 16 changes. |
 | `prisma-orm-v7-skills` | Key facts and breaking changes for upgrading to Prisma ORM 7. Consider version 7 changes before generation or troubleshooting |

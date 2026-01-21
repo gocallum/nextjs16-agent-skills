@@ -141,6 +141,7 @@ For complex skills, add a section that helps the agent choose the right approach
 | `prisma-orm-v7-skills` | Prisma ORM 7 upgrade guide, ESM-only, driver adapters |
 | `ai-sdk-6-skills` | AI SDK 6 Beta, agents, tool approval, Groq, AI Gateway |
 | `authjs-skills` | Auth.js v5 for Next.js authentication |
+| `clerk-nextjs-skills` | Clerk authentication for Next.js 16, proxy.ts setup, migration from middleware.ts, MCP server integration |
 | `shadcn-skills` | shadcn/ui components, blocks, forms, theming |
 | `upstash-vector-db-skills` | Vector DB, semantic search, RAG patterns |
 | `mcp-server-skills` | MCP servers in Next.js with mcp-handler |
